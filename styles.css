@@ -1,0 +1,104 @@
+@font-face {
+  font-family: 'journalregular';
+  src: url('fonts/journal-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.brand-logo {
+  max-width: 100%; /* Responsive design */
+  height: auto; /* Maintain aspect ratio */
+  width: 200px; /* Adjust width as needed */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'journalregular';
+  line-height: 1.6;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 2rem 2rem; /* Remove top padding */
+}
+
+.category {
+  background: linear-gradient(135deg, #B7BE8B 0%, #d7d8cd 100%);
+  color: #71673A;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  font-family: 'journalregular';
+  line-height: 1.6;
+  display: flex; /* Add flex display */
+}
+
+/* Nav Bar */
+nav {
+  background-color: #E7DEB3;
+  padding: 0.5rem;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+}
+
+.nav-container {
+  width: 150%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+
+.nav-logo {
+  height: 80px; /* Adjust logo size */
+  padding-left: 0;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  align-items: flex-end;
+}
+
+.nav-link {
+  color: #71673A; /* Rustic Brown */
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-family: 'journalregular';
+  font-size: 3rem;
+  position: relative;
+  align-items: end;
+}
+
+.nav-link:hover {
+  color: #FFC30B; /* Buttery yellow */
+}
+
+/* Smooth animations */
+.nav-link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFC30B; /* Buttery yellow */
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
